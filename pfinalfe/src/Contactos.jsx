@@ -1,19 +1,21 @@
 import './styles/Contactos.css'
+// import { useRef } from "react"
+// import { useNavigate } from "react-router-dom"
 
 function Contactos() {
 
-  // nav("/adopcion")
+
     return (
       <>
       <p>tel: 63113247</p>
       <p>gmail: nchevez@fwdcostarica</p>
       <p>insta: Moha_saborio</p>
       <p>face: Moha Chevez Saborio</p>
-      <h1>Contactenos </h1>
+      <h1>Comentario o Sugegencia </h1>
       <input type="text" placeholder="ingrese su nombre"/>
       <input type="coreo" placeholder="ingrese su gmail"/>
-      <input type="text" />
-      <button onClick={"./adopcion"}>Enviar</button>
+      <input type="text" placeholder="ingrese el texto"/>
+
       </>
     )
   }

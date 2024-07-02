@@ -15,6 +15,10 @@ function Principal() {
       <input className="input" type="text" placeholder="Que busca"/>
       </h1>
       </nav>
+      <p>Si desea adoptar una mascota puede contactarnos por los siguientes medios</p>
+      <button>instagram: ...</button>
+      <button>Telefono: ...</button>
+      <button>Correo: ...</button>
       <p>Si desea poner una mascota en adopcion dele click al sigiente boton</p>
       <button onClick={("/adopcion")}>Continuar</button>
       </>

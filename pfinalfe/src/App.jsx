@@ -2,28 +2,28 @@
 // import reactLogo from './assets/react.svg'
 // import viteLogo from '/vite.svg'
 import './App.css'
-import AuthPage from './componentesApp/AuthPage'
-import LoginForm from './LoginForm'
-import RegistrationForm from './RegistrationForm'
-// import Login from './Login'
-// import Principal from './Principal'
-// import Registro from './Registro'
-// import Contactos from './Contactos'
-// import Adopcion from './Adopcion'
+// import AuthPage from './componentesApp/AuthPage'
+// import LoginForm from './LoginForm'
+// import RegistrationForm from './RegistrationForm'
+import Login from './Login'
+import Principal from './Principal'
+import Registro from './Registro'
+import Contactos from './Contactos'
+import Adopcion from './Adopcion'
 
 
 function App() {
 
   return (
     <>
-    {/* <Registro/>
+    <Registro/>
     <Login/>
     <Principal/>
     <Adopcion/>
-    <Contactos/> */}
-    <AuthPage/>
+    <Contactos/>
+    {/* <AuthPage/>
     <LoginForm/>
-    <RegistrationForm/>
+    <RegistrationForm/> */}
     </>
   )
 }

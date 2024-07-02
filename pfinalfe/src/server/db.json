@@ -1,7 +1,50 @@
 {
-    "users": [
-      { "id": 1, "name": "John Doe", "email": "john@example.com" },
-      { "id": 2, "name": "Jane Smith", "email": "jane@example.com" }
-    ]
-  }
-  
+  "users": [
+    {
+      "id": 1,
+      "name": "John Doe",
+      "email": "john@example.com"
+    },
+    {
+      "id": 2,
+      "name": "Jane Smith",
+      "email": "jane@example.com"
+    },
+    {
+      "id": "0d8c",
+      "nombre": "asd",
+      "correo": "asd",
+      "clave": "asd"
+    },
+    {
+      "id": "16d1",
+      "nombre": "123",
+      "correo": "123",
+      "clave": "123"
+    },
+    {
+      "id": "9132",
+      "nombre": "1",
+      "correo": "1",
+      "clave": "1"
+    },
+    {
+      "id": "56a3",
+      "nombre": "1",
+      "correo": "1",
+      "clave": "1"
+    },
+    {
+      "id": "98ea",
+      "nombre": "1",
+      "correo": "1",
+      "clave": "123"
+    },
+    {
+      "id": "8335",
+      "nombre": "123",
+      "correo": "234",
+      "clave": "345"
+    }
+  ]
+}

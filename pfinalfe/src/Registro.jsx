@@ -1,45 +1,40 @@
-import { useRef } from "react"
+import { useState } from "react"
+import { post } from "./hooks/useFecht"
 import { useNavigate } from "react-router-dom"
 
-async function PostRegistro(obj) {
 
-    try {
-        const respuesta = await fetch(`http://localhost:3001/users`, {
-            method: "POST",
-            headers: {
-            },
-            body: JSON.stringify(obj)
-        })
-        let agregar = await respuesta.json()
-
-        console.log(agregar)
-    } catch (error) {
-        console.error(error)
-    }
-}
 
 const Registro = () => {
     const nav = useNavigate()
-    const nombre = useRef('')
-    const usuario = useRef('')
-    const clave = useRef('')
+    const [nombre,setNombre] =useState('')
+    const [correo,setCorreo] =useState('')
+    const [clave,setClave]= useState('')
 
+
+    
+    const crearUsuario =()=>{
+        const user={
+            nombre:nombre,
+            correo:correo,
+            clave:clave
+        }
+        post('users',user)
+
+    }
     const espacios = () => {
         // console.log("nombre", nombre.current.value)
-        if (!nombre.current.value && !usuario.current.value && !clave.current.value) {
-            alert("hay espacios vacios")
-        } else {
+        if (!nombre.current && !correo.current && !clave.current) {
             
             nav("/login")
-        }
+        } 
     }
 
     return (
         <>
-            <input className="inicio" type="text" placeholder="Ingrese su nombre" ref={nombre} />
-            <input className="inicio" type="gmail" placeholder="Ingrese su correo" ref={usuario} />
-            <input className="inicio" type="password" placeholder="Ingrese su contraseña" ref={clave} />
-            <button className="boton" onClick={PostRegistro}>Guardar</button>
+            <input className="inicio" type="text" placeholder="Ingrese su nombre" onChange={(e)=>setNombre(e.target.value)} />
+            <input className="inicio" type="mail" placeholder="Ingrese su correo" onChange={(e)=>setCorreo(e.target.value)} />
+            <input className="inicio" type="password" placeholder="Ingrese su contraseña" onChange={(e)=>setClave(e.target.value)} />
+            <button className="boton" onClick={crearUsuario}>Guardar</button>
             <button className="boton" onClick={espacios}>Login</button>
         </>
     )
