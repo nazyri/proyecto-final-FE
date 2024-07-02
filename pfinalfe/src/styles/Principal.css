@@ -1,0 +1,21 @@
+body{
+    background-color: black;
+}
+
+.nav{
+    background-color: #513C3C;
+    margin-top: -394px;
+    text-align: center;
+    width: 1490px;
+    height: 95px;
+    color: white;
+    text-decoration-line: underline;
+}
+
+.input{
+    margin: 50px;
+    border-radius: 30px;
+    width: 200px;
+    height: 20px;
+}
+
