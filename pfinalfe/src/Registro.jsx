@@ -23,11 +23,13 @@ const Registro = () => {
     }
     const espacios = () => {
         // console.log("nombre", nombre.current.value)
-        if (!nombre.current && !correo.current && !clave.current) {
-            
+        if (!nombre.trim && !correo.trim && !clave.trim) {
+            alert("espacios vacios")
+        } else {
             nav("/login")
-        } 
-    }
+
+        }
+        }
 
     return (
         <>

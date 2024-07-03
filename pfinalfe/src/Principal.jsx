@@ -1,10 +1,31 @@
 import "./styles/Principal.css"
 
+
 function Principal() {
 
+  // const tareasFiltradas = data.filter(tarea => tarea.nombre === nombre);
 
-    return (
-      <>
+    
+  //   if (tareasFiltradas.length === 0) {
+  //     // Muestra la tarea no encontrada
+  //   alert("No hay tareas con ese nombre.");
+  // } else {
+    
+  //   // Muestra la tarea encontrada
+  // tareasFiltradas.forEach(tareaFiltrada => {
+  //         alert(`Se encontro la tarea "${tareaFiltrada.nombre}"`);
+  //       });
+      
+  //     //Al darle click muestra la tarea encontrada
+  //   btnBuscar.addEventListener("click", () => {
+  //     buscarTarea(barraBusqueda.value);
+  //   });
+  // }
+
+    
+      
+return (
+  <>
       <nav className="nav">
       <h1>
         seccion destacada
@@ -25,23 +46,34 @@ function Principal() {
     )
   }
   
+  
   export default Principal
   // boton de contactar en cada imagen 
   //razas de perros 
   //1. Pastor alemán
-// 2. Husky siberiano
-// 3. Golden retriever
-// 4. Bulldog francés
-// 5. Chihuahua
-// 6. Pit bull terrier americano
-// 7. Beagle
-// 8. Mastín
-// 9. Dóberman
-// 10. Rottweiler
-//razas de gatos
-// Persa
-// Azul ruso
-// Siamés
-// Angora turco
-// Siberiano
-// Bengalí
+  // 2. Husky siberiano
+  // 3. Golden retriever
+  // 4. Bulldog francés
+  // 5. Chihuahua
+  // 6. Pit bull terrier americano
+  // 7. Beagle
+  // 8. Mastín
+  // 9. Dóberman
+  // 10. Rottweiler
+  //razas de gatos
+  // Persa
+  // Azul ruso
+  // Siamés
+  // Angora turco
+  // Siberiano
+  // Bengalí
+  
+  //
+
+    // const espacios = () => {
+    //     // console.log("nombre", nombre.current.value)
+    //     if (!nombre.trim && !correo.trim && !clave.trim) {
+            
+    //         nav("/login")
+    //     } 
+    // }

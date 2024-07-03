@@ -11,33 +11,9 @@
       "email": "jane@example.com"
     },
     {
-      "id": "0d8c",
-      "nombre": "asd",
-      "correo": "asd",
-      "clave": "asd"
-    },
-    {
       "id": "16d1",
       "nombre": "123",
       "correo": "123",
-      "clave": "123"
-    },
-    {
-      "id": "9132",
-      "nombre": "1",
-      "correo": "1",
-      "clave": "1"
-    },
-    {
-      "id": "56a3",
-      "nombre": "1",
-      "correo": "1",
-      "clave": "1"
-    },
-    {
-      "id": "98ea",
-      "nombre": "1",
-      "correo": "1",
       "clave": "123"
     },
     {
@@ -45,6 +21,25 @@
       "nombre": "123",
       "correo": "234",
       "clave": "345"
+    }
+  
+  ],
+  "products":[
+    {
+      "id": 1,
+      "imagenes": "/imenes",
+      "fecha": "3/7/24",
+      "tamaño": "cachorro",
+      "raza": "Pastor Aleman",
+      "descripcion": "Este cachorro esta en adopcion tiene 2 meses y esta listo para que lo adopten lo mas pronto."
+    },
+    {
+      "id": 2,
+      "imagenes": "/imenes",
+      "fecha": "3/7/24",
+      "tamaño": "Adulto",
+      "raza": "gato perza",
+      "descripcion": "Este gato perza adulto esta en adopcion, esta listo para que lo adopten lo mas pronto posible."
     }
   ]
 }

@@ -6,13 +6,13 @@ import { get } from "./hooks/useFecht"
 const Login = () => {
 
   const nav = useNavigate()
-  const [useData,setUseData]=useState([])
+  const [useData, setUseData]= useState([])
   const [correo, setCorreo] = useState('')
   const [clave, setClave] = useState('')
   
   // error
     const vacios = () => {
-    if (!correo.current.value && !clave.current.value) {
+    if (!correo.trim && !clave.trim && !useData) {
        alert ("hay espacios vacios")
     }else{
       nav("/principal")
@@ -21,12 +21,13 @@ const Login = () => {
     }
 
     useEffect (()=>{
-      const usarGet =async ()=>{
+     const usarGet =async ()=>{
      const data= await get("users")
         setUseData(data)
 
     }
-            },[])
+    usarGet()
+    },[])
             
 
     return (
