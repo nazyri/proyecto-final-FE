@@ -1,21 +1,33 @@
 body{
     background-color: black;
+    color: white;
 }
 
 .nav{
     background-color: #513C3C;
     margin-top: -394px;
     text-align: center;
-    width: 1490px;
-    height: 95px;
+    width: 1485px;
+    height:200px;
     color: white;
     text-decoration-line: underline;
 }
 
 .input{
-    margin: 50px;
-    border-radius: 30px;
+    border-radius: 10px;
     width: 200px;
     height: 20px;
+    margin-left: 1200px;
 }
 
+.destacada{
+    background-color: #513C3C;
+    color: rgb(233, 231, 231);
+    height: 20px;
+    margin-top: 70px;
+}
+
+button{
+    background-color: bisque;
+    margin: 10px;
+}

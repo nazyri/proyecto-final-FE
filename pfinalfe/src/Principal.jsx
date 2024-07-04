@@ -1,9 +1,53 @@
+// import { get } from "./hooks/useFecht"
 import "./styles/Principal.css"
+import { useState } from "react"
+import Visualizacion from "./Visualizacion"
+import ListaAdopcion from "./ListaAdopcion"
 
 
 function Principal() {
+  const [buscar,setBuscar] =useState('')
+  const [mostrarAnimales,setMostrarAnimales]=useState(false)
+  const [mostrarLista,setMostrarLista]=useState(false)
 
-  // const tareasFiltradas = data.filter(tarea => tarea.nombre === nombre);
+  const espacios = () => {
+      // console.log("nombre", nombre.current.value)
+      if (!buscar.trim) {
+          alert("espacios vacios")
+      } 
+      }
+
+return (
+  <>
+      <nav className="nav">
+      <h1>
+        <button className="destacada">seccion destacada</button>
+        <button className="destacada">Canino</button>
+        <button className="destacada">Felino</button>
+        <button className="destacada" onClick={espacios}>Buscar</button>
+        <input className="input" type="text" placeholder="Que busca" onChange={(e)=>setBuscar(e.target.value)}/>
+      </h1>
+
+      <button className="BotonMostrar" onClick={()=>setMostrarAnimales(!mostrarAnimales)}>Mostrar Mascotas</button>
+      </nav>{mostrarAnimales?<Visualizacion/>:<div>
+      <p>Si desea adoptar una mascota puede contactarnos por los siguientes medios</p>
+      <button>instagram: ...</button>
+      <button>Telefono: ...</button>
+      <button>Correo: ...</button>
+      <p>Si desea poner una mascota en adopcion dele click al sigiente boton</p>
+      <button onClick={("/adopcion")}>Continuar</button>
+      <p>si desea ver los animales que estan en adopcion dele click al siguiente boton</p>
+        <button onClick={()=>setMostrarLista(!mostrarLista)}>Ver lista de adopcion</button>
+        <nav/>{mostrarLista?<ListaAdopcion/>:<div></div>}
+      </div>}
+      </>
+    )
+  }
+  
+  
+  export default Principal
+
+   // const tareasFiltradas = data.filter(tarea => tarea.nombre === nombre);
 
     
   //   if (tareasFiltradas.length === 0) {
@@ -21,59 +65,3 @@ function Principal() {
   //     buscarTarea(barraBusqueda.value);
   //   });
   // }
-
-    
-      
-return (
-  <>
-      <nav className="nav">
-      <h1>
-        seccion destacada
-        Canino
-        Felino
-        Tamaños
-        Razas
-      <input className="input" type="text" placeholder="Que busca"/>
-      </h1>
-      </nav>
-      <p>Si desea adoptar una mascota puede contactarnos por los siguientes medios</p>
-      <button>instagram: ...</button>
-      <button>Telefono: ...</button>
-      <button>Correo: ...</button>
-      <p>Si desea poner una mascota en adopcion dele click al sigiente boton</p>
-      <button onClick={("/adopcion")}>Continuar</button>
-      </>
-    )
-  }
-  
-  
-  export default Principal
-  // boton de contactar en cada imagen 
-  //razas de perros 
-  //1. Pastor alemán
-  // 2. Husky siberiano
-  // 3. Golden retriever
-  // 4. Bulldog francés
-  // 5. Chihuahua
-  // 6. Pit bull terrier americano
-  // 7. Beagle
-  // 8. Mastín
-  // 9. Dóberman
-  // 10. Rottweiler
-  //razas de gatos
-  // Persa
-  // Azul ruso
-  // Siamés
-  // Angora turco
-  // Siberiano
-  // Bengalí
-  
-  //
-
-    // const espacios = () => {
-    //     // console.log("nombre", nombre.current.value)
-    //     if (!nombre.trim && !correo.trim && !clave.trim) {
-            
-    //         nav("/login")
-    //     } 
-    // }

@@ -1,0 +1,10 @@
+.cuadricula{
+    z-index: -100;
+    height: 500px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+.BotonMostrar{
+    z-index: 100;
+   margin-bottom: -300px;
+}
