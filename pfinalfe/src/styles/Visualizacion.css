@@ -1,10 +1,31 @@
-.cuadricula{
-    z-index: -100;
-    height: 500px;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+body{
+background-color: black;
 }
+
+.cuadricula{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: 20vh;
+    gap: 20px;
+}
+
 .BotonMostrar{
     z-index: 100;
    margin-bottom: -300px;
+}
+
+.contTitulos{
+    margin-top: 100px;
+    display: flex;
+    font-size: 45px;
+}
+.contTitulos .destacadaGrande{
+    margin-top: 80px;
+    width: 450px;
+    font-size: 45px;
+    background-color: #513C3C;
+    color: rgb(233, 231, 231);
+    text-overflow: hidden;
+white-space: nowrap;
 }

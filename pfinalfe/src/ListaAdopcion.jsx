@@ -4,7 +4,8 @@ function ListaAdopcion() {
 
   return (
     <div>
-        <ul>Animales en adopcion</ul>
+        <ul className="lista">Animales en adopcion</ul>
+        <img src={"src/imagenes/sombra dog.png"}/>
         <li>Pastor alemán</li> 
         <li>Husky siberiano</li>
          <li>Golden retriever</li>
@@ -16,6 +17,7 @@ function ListaAdopcion() {
          <li>Dóberman</li>
          <li>Rottweiler</li>
          <hr />
+         <img src={"src/imagenes/sombra catt.png"}/>
         <ul>razas de gatos</ul>
         <li>Persa</li>
         <li>Azul ruso</li>
@@ -23,7 +25,6 @@ function ListaAdopcion() {
         <li>Angora turco</li>
         <li>Siberiano</li>
         <li>Bengalí</li>
-        <button></button>
     </div>
   )
   }

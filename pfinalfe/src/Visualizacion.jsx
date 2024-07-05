@@ -24,8 +24,8 @@ const Visualizacion=()=>{
         <div className="cuadricula">
           {animales.map(animal => (
             <div key={animal.id}>
+                <img src={animal.imagen} alt={animal.descripcion} />
                 <p>{animal.descripcion}</p>
-                <img src={animal.imagenes} alt={animal.descripcion} />
                 <p>{animal.fecha}</p>
                 <p>{animal.tamaño}</p>
                 <p>{animal.raza}</p>

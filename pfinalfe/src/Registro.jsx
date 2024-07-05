@@ -26,6 +26,7 @@ const Registro = () => {
         if (!nombre.trim && !correo.trim && !clave.trim) {
             alert("espacios vacios")
         } else {
+            
             nav("/login")
 
         }

@@ -9,6 +9,9 @@ function Principal() {
   const [buscar,setBuscar] =useState('')
   const [mostrarAnimales,setMostrarAnimales]=useState(false)
   const [mostrarLista,setMostrarLista]=useState(false)
+  const [mostrarDestacados,setMostrarDestacados]=useState(false)
+  const [mostrarCanino,setMostrarCanino]=useState(false)
+  const [mostrarFelino,setMostrarFelino]=useState(false)
 
   const espacios = () => {
       // console.log("nombre", nombre.current.value)
@@ -20,14 +23,17 @@ function Principal() {
 return (
   <>
       <nav className="nav">
-      <h1>
-        <button className="destacada">seccion destacada</button>
-        <button className="destacada">Canino</button>
-        <button className="destacada">Felino</button>
+      <div className="contTitulos">
+        <button className="destacadaGrande" onClick={()=>setMostrarDestacados(!mostrarDestacados)}>seccion destacada</button>
+        {mostrarDestacados?<Destacada/>:<div></div>}
+        <button className="destacada" onClick={()=>setMostrarCanino(!mostrarCanino)}>Canino</button>
+        {mostrarCanino?<Canino/>:<div></div>}
+        <button className="destacada" onClick={()=>setMostrarFelino(!mostrarFelino)}>Felino</button>
+        {mostrarFelino?<Felino/>:<div></div>}
         <button className="destacada" onClick={espacios}>Buscar</button>
         <input className="input" type="text" placeholder="Que busca" onChange={(e)=>setBuscar(e.target.value)}/>
-      </h1>
-
+      </div>
+      
       <button className="BotonMostrar" onClick={()=>setMostrarAnimales(!mostrarAnimales)}>Mostrar Mascotas</button>
       </nav>{mostrarAnimales?<Visualizacion/>:<div>
       <p>Si desea adoptar una mascota puede contactarnos por los siguientes medios</p>
