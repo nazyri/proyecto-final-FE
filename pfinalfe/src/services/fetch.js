@@ -1,41 +1,69 @@
-//Get
-const apiUrl = "http://localhost:3001/users"
-const getData = async () => {
+
+const url =  "http://localhost:3001/"
+
+const getData = async (endpoint, id = "") => {
     try {
-        const response = await fetch(apiUrl, {
-            method: 'GET',
-            headers: {
-            'Content-Type': 'application/json'
-            },
-            body: JSON.stringify()
-        })
-        const datos = response.json()
-        console.log(datos);
-        return datos
-    } catch (error) {
-        console.error('Error al cargar los usuarios:', error);
-    }
-  };
-  export default getData
- //Post
-const Post = async (obj) => {
+      const response = await fetch(url+endpoint+"/"+id, {
+        method: "GET",
+        mode: "cors",
+        credentials: "same-origin",
+        headers: {
+          "Content-Type": "application/json",
+        }
+      });
+      const data  = response.json()
+    return data
+     
+    } catch (e) {
+      console.error(e);
+    
+    } 
+};
+
+
+  const postData = async (endpoint, body) => {  
     try {
-        const response = await fetch(apiUrl, {
-            method: 'POST',
-            headers: {
-            'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(obj)
-        })
-        const data = response.json()
-        console.log(data);
-        return data
-    } catch (error) {
-        console.error('Error al cargar los usuarios:', error);
-    }
+      const response = await fetch(url+endpoint, {
+        method: "POST",
+        mode: "cors",
+        credentials: "same-origin",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(body)
+      });
+      
+      const data = await response.json();
+      return data;
+    } catch (e) {
+      console.error(e);
+    
+      return null;
+    } 
 }
-export {Post}
 
 
+  
+   const putData = async (endpoint, body) => {
 
+    try {
+      const response = await fetch(url+endpoint, {
+        method: "PUT",
+        mode: "cors",
+        credentials: "same-origin",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(body)
+      });
+     
+      const data = await response.json();
+      return data;
+    } catch (e) {
+      console.error(e);
+      
+      return null;
+    } 
+}
 
+export { getData, postData, putData };

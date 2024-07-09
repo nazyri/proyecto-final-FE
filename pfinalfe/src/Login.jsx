@@ -34,7 +34,7 @@ const Login = () => {
       <>
     <input className="inicio" type="gmail" id="correos" placeholder="Ingrese su correo"onChange={(e)=>setCorreo(e.target.value)}/>
     <input className="inicio" type="password" id="clave" placeholder="Ingrese su contraseña"onChange={(e)=>setClave(e.target.value)}/>
-    <button className="boton" id="guardarclave"  onClick={()=>{nav("/principal")}}>Ir a la pagina</button>
+    <button className="boton" id="guardarclave"  onClick={()=>{nav("/principal")(vacios)}}>Ir a la pagina</button>
       </>
     )
   }

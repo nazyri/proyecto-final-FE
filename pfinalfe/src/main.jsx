@@ -1,21 +1,20 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-// import App from './App.jsx'
 import './index.css'
 import { RouterProvider, createBrowserRouter } from 'react-router-dom'
-// import AuthPage from './componentesApp/AuthPage'
-// import Registro from './registro'
 import Registro from './Registro.jsx'
 import Login from './Login.jsx'
 import Principal from './Principal.jsx'
 import ListaAdopcion from './ListaAdopcion.jsx'
 import Adopcion from './Adopcion.jsx'
+import SeccionDestacada from './SeccionDestacada.jsx'
 
 const router= createBrowserRouter([
   {
     path:"/",
     element: <Registro/>
   },
+  {path: "/destacada", element: <SeccionDestacada/> },
   {
     path:"/Login",
     element: <Login/>

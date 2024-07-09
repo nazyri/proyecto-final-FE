@@ -5,10 +5,12 @@ import Login from "../pages/Login";
 import Singnup from "..pages/home";
 import Home from "../pages/Home";
 import Adopcion from "./Adopcion";
+import SeccionDestacada from "./SeccionDestacada";
 
 const router = createBrowserRouter([
     {path: "/", element: <Login/> },
     {path: "/login", element: <Login/> },
+    {path: "/destacada", element: <SeccionDestacada/> },
     {path: "/singnup", element: <Singnup/> },
     {path: "/home", element: <PrivateRoutes route={<Home/>} /> },
     {path: "/adopcion", element: <PrivateRoutes route={<Adopcion/>} /> },

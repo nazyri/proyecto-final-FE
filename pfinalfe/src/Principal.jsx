@@ -3,15 +3,18 @@ import "./styles/Principal.css"
 import { useState } from "react"
 import Visualizacion from "./Visualizacion"
 import ListaAdopcion from "./ListaAdopcion"
+// import SeccionDestacada from "./SeccionDestacada"
+import { useNavigate } from "react-router-dom"
+
 
 
 function Principal() {
   const [buscar,setBuscar] =useState('')
   const [mostrarAnimales,setMostrarAnimales]=useState(false)
   const [mostrarLista,setMostrarLista]=useState(false)
-  const [mostrarDestacados,setMostrarDestacados]=useState(false)
   const [mostrarCanino,setMostrarCanino]=useState(false)
   const [mostrarFelino,setMostrarFelino]=useState(false)
+  const nav= useNavigate();
 
   const espacios = () => {
       // console.log("nombre", nombre.current.value)
@@ -24,8 +27,8 @@ return (
   <>
       <nav className="nav">
       <div className="contTitulos">
-        <button className="destacadaGrande" onClick={()=>setMostrarDestacados(!mostrarDestacados)}>seccion destacada</button>
-        {mostrarDestacados?<Destacada/>:<div></div>}
+        <button className="destacadaGrande" onClick={()=>nav('/destacada')}>seccion destacada</button>
+       
         <button className="destacada" onClick={()=>setMostrarCanino(!mostrarCanino)}>Canino</button>
         {mostrarCanino?<Canino/>:<div></div>}
         <button className="destacada" onClick={()=>setMostrarFelino(!mostrarFelino)}>Felino</button>
@@ -52,22 +55,3 @@ return (
   
   
   export default Principal
-
-   // const tareasFiltradas = data.filter(tarea => tarea.nombre === nombre);
-
-    
-  //   if (tareasFiltradas.length === 0) {
-  //     // Muestra la tarea no encontrada
-  //   alert("No hay tareas con ese nombre.");
-  // } else {
-    
-  //   // Muestra la tarea encontrada
-  // tareasFiltradas.forEach(tareaFiltrada => {
-  //         alert(`Se encontro la tarea "${tareaFiltrada.nombre}"`);
-  //       });
-      
-  //     //Al darle click muestra la tarea encontrada
-  //   btnBuscar.addEventListener("click", () => {
-  //     buscarTarea(barraBusqueda.value);
-  //   });
-  // }

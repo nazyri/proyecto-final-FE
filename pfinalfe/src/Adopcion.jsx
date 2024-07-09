@@ -60,7 +60,6 @@ function Adopcion() {
       <p>Poner en adopcion a una mascota de la calle</p>
       <input type="file" placeholder="Suba la imagen" onChange={handleImageChange}/>
       <img src={selectedImage}/>
-      {/* <input type="text" placeholder="ingrese la fecha" onChange={(e)=>setFecha(e.target.value)}/> */}
           <DatePicker selected={fecha}  placeholder="ingrese la fecha" onChange={(date) => setFecha(date)} />
       <input type="text" placeholder="Que raza es" onChange={(e)=>setRaza(e.target.value)}/>
       <input type="text" placeholder="Agregue una descripcion" onChange={(e)=>setDescripcion(e.target.value)}/>

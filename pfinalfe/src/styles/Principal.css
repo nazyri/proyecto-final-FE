@@ -14,10 +14,11 @@ body{
 }
 
 .input{
+    background-color: aqua;
     border-radius: 10px;
     width: 200px;
     height: 20px;
-    margin-left: 1200px;
+    margin-top: -2500px;
 }
 
 .destacada{
