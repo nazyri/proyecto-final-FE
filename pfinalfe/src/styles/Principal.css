@@ -32,3 +32,10 @@ button{
     background-color: bisque;
     margin: 10px;
 }
+
+.buscar{
+    margin-top: 115px;
+    border-radius: 10px;
+    width: 290px;
+    height: 30px;
+}

@@ -1,16 +1,20 @@
 import "./styles/Visualizacion.css"
-import { get } from "./hooks/useFecht"
+import { get, Delete } from "./hooks/useFecht"
 import { useState, useEffect } from "react"
+import Editar from "./Editar"
+
+
 const Visualizacion=()=>{
 
     const [animales,setAnimales]=useState([])
-
+    const [editando,setEditando]=useState(false)
+    const [id,setId]=useState('')
+    const [eliminar, setEliminar]=useState('')
 
     useEffect(()=>{
     console.log('Se ejecuta UseEffect');
     getProducts()
-    },[])
-
+    },[editando])
 
     let getProducts=async()=>{
   
@@ -20,8 +24,34 @@ const Visualizacion=()=>{
     
     }
 
+const cambiarEstado=(animal)=>{
+
+  setEditando(!editando)
+setId(animal)
+
+}
+
+const borrar=(animal)=>{
+  setEliminar(!eliminar)
+  setId(animal)
+  Delete('products/',animal)
+  setEditando(!editando)
+  setEditando(!editando)
+  console.log('se ejecuto hasta aca');
+ 
+  }
+  //   {mostrarAnimales ? (
+  //     <Visualizacion animales={datosAnimales.filter(filtrarPorRaza)} />
+  // ) : (
+  //     <div>
+  //         {/* Contenido si no se muestran animales */}
+  //     </div>
+  // )}
+
     return (
-        <div className="cuadricula">
+      
+      <div className="cuadricula">
+          { editando?<Editar animal={id} cambio={setEditando} />:<></>}
           {animales.map(animal => (
             <div key={animal.id}>
                 <img src={animal.imagen} alt={animal.descripcion} />
@@ -29,8 +59,8 @@ const Visualizacion=()=>{
                 <p>{animal.fecha}</p>
                 <p>{animal.tamaño}</p>
                 <p>{animal.raza}</p>
-                
-                
+                <button onClick={()=>{borrar(animal.id)}}>X</button>
+                <button onClick={()=>{cambiarEstado(animal)}}>EDITAR</button>       
                 </div> 
           ))}
         </div>

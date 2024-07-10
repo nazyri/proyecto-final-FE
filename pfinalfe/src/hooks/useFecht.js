@@ -46,10 +46,10 @@ const url =  "http://localhost:3001/"
 
 
   
-   const put = async (endpoint, body) => {
+   const put = async (endpoint,id, body) => {
 
     try {
-      const response = await fetch(url+endpoint, {
+      const response = await fetch(url+endpoint+id, {
         method: "PUT",
         mode: "cors",
         credentials: "same-origin",
@@ -69,4 +69,24 @@ const url =  "http://localhost:3001/"
  
 }
 
-export { get, post, put };
+const Delete = async (endpoint, id ) => {
+  try {
+    console.log('llega al delete');
+    const response = await fetch(url+endpoint+id, {
+      method: "DELETE",
+      mode: "cors",
+      credentials: "same-origin",
+      headers: {
+        "Content-Type": "application/json",
+      }
+    });
+    const data  = response.json()
+  return data
+   
+  } catch (e) {
+    console.error(e);
+  
+  } 
+};
+
+export { get, post, put, Delete};

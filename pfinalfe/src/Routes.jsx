@@ -7,6 +7,7 @@ import Home from "../pages/Home";
 import Adopcion from "./Adopcion";
 import SeccionDestacada from "./SeccionDestacada";
 
+
 const router = createBrowserRouter([
     {path: "/", element: <Login/> },
     {path: "/login", element: <Login/> },

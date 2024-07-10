@@ -8,13 +8,16 @@ import Principal from './Principal.jsx'
 import ListaAdopcion from './ListaAdopcion.jsx'
 import Adopcion from './Adopcion.jsx'
 import SeccionDestacada from './SeccionDestacada.jsx'
+import Editar from './Editar.jsx'
+import Canino from './Canino.jsx'
+import Felino from './Felino.jsx'
 
 const router= createBrowserRouter([
   {
     path:"/",
     element: <Registro/>
   },
-  {path: "/destacada", element: <SeccionDestacada/> },
+  
   {
     path:"/Login",
     element: <Login/>
@@ -30,6 +33,22 @@ const router= createBrowserRouter([
   {
     path:"/Adopcion",
     element: < Adopcion/>
+  },
+  {
+    path: "/destacada", 
+    element: <SeccionDestacada/> 
+  },
+  {
+    path: "/editar", 
+    element: <Editar/> 
+  },
+  {
+    path: "/canino", 
+    element: <Canino/> 
+  },
+  {
+    path: "/felino", 
+    element: <Felino/> 
   },
   {
     path:"/Contactos",

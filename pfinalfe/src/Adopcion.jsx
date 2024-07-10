@@ -66,6 +66,7 @@ function Adopcion() {
       <button onClick={Adopcion}>Poner en adopcion</button>
       <button onClick={espacios}>contactarnos</button>
 
+
       
       </>
     )

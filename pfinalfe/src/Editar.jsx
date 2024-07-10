@@ -1,29 +1,38 @@
+
+import {  useState } from "react";
 import { put } from "./hooks/useFecht"
 
-function Editar() {
 
-    const [fecha,setFecha] =useState(new Date())
+function Editar({animal, cambio}) {
+
+    const [raza, setRaza]= useState('')
     const [descripcion,setDescripcion]= useState('')
-    const [selectedImage, setSelectedImage] = useState(null);
 
-    const editar =()=>{
+
+    const actualizar = async ()=>{
+      console.log('se ejecuta');
         const user={
-            imagen:selectedImage,
-            fecha:fecha.toLocaleDateString(),
-            descripcion:descripcion
+            raza:raza,
+            descripcion:descripcion,
+            fecha:animal.fecha,
+            imagen:animal.imagen
+
         }
-    put('products',user)
+        await put ("products/", animal.id, user)
+        cambio(false)
     }
     
 
+
+  
+
   return (
     <div>
-      <input type="file" placeholder="cambiar imagen" onChange={handleImageChange}/>
-      <img src={selectedImage}/>
-          <DatePicker selected={fecha}  placeholder="cambiar fecha" onChange={(date) => setFecha(date)} />
-      <input type="text" placeholder="cambiar descripcion" onChange={(e)=>setDescripcion(e.target.value)}/>
+      <input type="text" placeholder="cambiar raza" onChange={(e)=> {setRaza(e.target.value)}}/>
+      <input type="text" placeholder="cambiar descripcion" onChange={(e)=>{setDescripcion(e.target.value)}}/>
       <p>Si desea que la informacion se actualice dele click al boton</p>
-      <button onClick={editar}>cambiar informacion</button>
+
+      <button type="button" onClick={actualizar}>cambiar informacion</button>
     </div>
   )
 }
