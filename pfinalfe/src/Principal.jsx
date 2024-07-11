@@ -50,10 +50,10 @@ return (
       
       <button className="BotonMostrar" onClick={()=>setMostrarAnimales(!mostrarAnimales)}>Mostrar Mascotas</button>
       </nav>{mostrarAnimales?<Visualizacion/>:<div>
-      <p>Si desea adoptar una mascota puede contactarnos por los siguientes medios</p>
+      {/* <p>Si desea adoptar una mascota puede contactarnos por los siguientes medios</p>
       <button>instagram: ...</button>
       <button>Telefono: ...</button>
-      <button>Correo: ...</button>
+      <button>Correo: ...</button> */}
 
       <p>si desea ver los animales que estan en adopcion dele click al siguiente boton</p>
         <button onClick={()=>setMostrarLista(!mostrarLista)}>Ver lista de adopcion</button>

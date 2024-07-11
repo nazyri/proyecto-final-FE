@@ -1,0 +1,44 @@
+.celeste{
+    display: grid;
+    grid-template-columns: 500px 500px;
+    gap: 1px;
+    margin: 100px;
+    text-align: center;
+    background-color: cyan;
+    width: 1290px;
+    height: 800px;
+}
+
+.tel{
+    background-color: aliceblue;
+    color: blue;
+    margin: 50px;
+    width: 250px;
+    height: 200px;
+}
+
+.correo{
+    background-color: aliceblue;
+    color: blue;
+    margin-top: 50px;
+    margin-left: -90px;
+    width: 250px;
+    height: 200px;
+}
+
+.insta{
+    background-color: aliceblue;
+    color: blue;
+    margin: 50px;
+    width: 250px;
+    height: 200px;
+}
+
+.ubi{
+    background-color: aliceblue;
+    color: blue;
+    margin-top: 50px;
+    margin-left: -90px;
+    width: 250px;
+    height: 200px;
+}
