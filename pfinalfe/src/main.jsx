@@ -11,6 +11,7 @@ import SeccionDestacada from './SeccionDestacada.jsx'
 import Editar from './Editar.jsx'
 import Canino from './Canino.jsx'
 import Felino from './Felino.jsx'
+import Contacto from './Contacto.jsx'
 
 const router= createBrowserRouter([
   {
@@ -51,9 +52,15 @@ const router= createBrowserRouter([
     element: <Felino/> 
   },
   {
-    path:"/Contactos",
-    // element: <Contactos/>
+    path: "/contactarnos", 
+    element: <Contacto/> 
   },
+  {
+    path: "/contactarnos", 
+    // element: <Contactarnos/> 
+  },
+
+
 ])
 
 

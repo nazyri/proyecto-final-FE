@@ -2,12 +2,9 @@ import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import { useState } from "react"
 import { post } from "./hooks/useFecht"
-import { useNavigate } from "react-router-dom"
 
 function Adopcion() {
 
-  
-    const nav = useNavigate()
     const [fecha,setFecha] =useState(new Date())
     const [raza,setRaza] =useState('')
     const [descripcion,setDescripcion]= useState('')
@@ -30,7 +27,7 @@ function Adopcion() {
         // console.log("nombre", nombre.current.value)
         if (!fecha.trim && !raza.trim && !selectedImage.trim && !descripcion.trim) {
             
-            nav("/contactos")
+            alert('holaaaa')
         } 
     }
 

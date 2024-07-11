@@ -40,13 +40,7 @@ const borrar=(animal)=>{
   console.log('se ejecuto hasta aca');
  
   }
-  //   {mostrarAnimales ? (
-  //     <Visualizacion animales={datosAnimales.filter(filtrarPorRaza)} />
-  // ) : (
-  //     <div>
-  //         {/* Contenido si no se muestran animales */}
-  //     </div>
-  // )}
+
 
     return (
       

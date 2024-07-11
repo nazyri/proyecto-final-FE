@@ -7,9 +7,12 @@ import { useNavigate } from "react-router-dom"
 
 
 
+
+
 function Principal() {
 
-  const [buscar, setBuscar] = useState('');
+  
+  // const [buscar, setBuscar] = useState('');
   const [mostrarAnimales,setMostrarAnimales]=useState(false)
   const [mostrarLista,setMostrarLista]=useState(false)
 
@@ -17,13 +20,13 @@ function Principal() {
   
   const nav= useNavigate();
 
-  const espacios = () => {
-    if (!buscar.trim()) {
-        alert("Por favor ingrese un término de búsqueda");
-    } else {
-        // Lógica para manejar la búsqueda
-    }
-};
+//   const espacios = () => {
+//     if (!buscar.trim()) {
+//         alert("Por favor ingrese un término de búsqueda");
+//     } else {
+//         // Lógica para manejar la búsqueda
+//     }
+// };
 
 
 
@@ -35,12 +38,14 @@ return (
        
         <button className="destacadaGrande" onClick={()=>nav('/canino')}>Canino</button>
 
-        <button className="destacada" onClick={()=>nav('/felino')}>Felino</button>
+        <button className="destacadaGrande" onClick={()=>nav('/felino')}>Felino</button>
 
-        <button className="destacada" onClick={espacios}>Buscar</button>
+        <button className="destacadaGrande" onClick={()=>nav('/contactarnos')}>Contactenos</button>
+
+        {/* <button className="destacada" onClick={espacios}>Buscar</button>
         <input type="text" className="buscar" placeholder="Que buscar" value={buscar} onChange={(e)=>setBuscar(e.target.value)}/>
 
-        <input className="input" type="text"/>
+        <input className="input" type="text"/> */}
       </div>
       
       <button className="BotonMostrar" onClick={()=>setMostrarAnimales(!mostrarAnimales)}>Mostrar Mascotas</button>
