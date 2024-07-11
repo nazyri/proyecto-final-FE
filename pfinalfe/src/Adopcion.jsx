@@ -3,6 +3,8 @@ import "react-datepicker/dist/react-datepicker.css";
 import { useState } from "react"
 import { post } from "./hooks/useFecht"
 
+
+
 function Adopcion() {
 
     const [fecha,setFecha] =useState(new Date())
@@ -12,17 +14,19 @@ function Adopcion() {
   
     
     const Adopcion =()=>{
-        const user={
-            imagen:selectedImage,
-            fecha:fecha.toLocaleDateString(),
-            raza:raza,
-            descripcion:descripcion
-        }
 
+      const user={
+        imagen:selectedImage,
+        fecha:fecha.toLocaleDateString(),
+        raza:raza,
+        descripcion:descripcion
+        }
+        
+        
         console.log(user);
         post('products',user)
-  
-    }
+        
+        }
     const espacios = () => {
         // console.log("nombre", nombre.current.value)
         if (!fecha.trim && !raza.trim && !selectedImage.trim && !descripcion.trim) {
@@ -63,7 +67,7 @@ function Adopcion() {
       <button onClick={Adopcion}>Poner en adopcion</button>
       <button onClick={espacios}>contactarnos</button>
 
-
+      <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
       
       </>
     )

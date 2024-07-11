@@ -7,8 +7,6 @@ import { useNavigate } from "react-router-dom"
 
 
 
-
-
 function Principal() {
 
   
@@ -20,13 +18,7 @@ function Principal() {
   
   const nav= useNavigate();
 
-//   const espacios = () => {
-//     if (!buscar.trim()) {
-//         alert("Por favor ingrese un término de búsqueda");
-//     } else {
-//         // Lógica para manejar la búsqueda
-//     }
-// };
+
 
 
 
@@ -42,22 +34,19 @@ return (
 
         <button className="destacadaGrande" onClick={()=>nav('/contactarnos')}>Contactenos</button>
 
-        {/* <button className="destacada" onClick={espacios}>Buscar</button>
-        <input type="text" className="buscar" placeholder="Que buscar" value={buscar} onChange={(e)=>setBuscar(e.target.value)}/>
-
-        <input className="input" type="text"/> */}
+ 
       </div>
       
       <button className="BotonMostrar" onClick={()=>setMostrarAnimales(!mostrarAnimales)}>Mostrar Mascotas</button>
       </nav>{mostrarAnimales?<Visualizacion/>:<div>
-      {/* <p>Si desea adoptar una mascota puede contactarnos por los siguientes medios</p>
-      <button>instagram: ...</button>
-      <button>Telefono: ...</button>
-      <button>Correo: ...</button> */}
+
 
       <p>si desea ver los animales que estan en adopcion dele click al siguiente boton</p>
         <button onClick={()=>setMostrarLista(!mostrarLista)}>Ver lista de adopcion</button>
         <nav/>{mostrarLista?<ListaAdopcion/>:<div></div>}
+
+     <p>Vision: la vision de esta empresa es que las personas pongan en adopcion a los animales de las calles para que encuentren un hogar</p>
+      <p>Objetivo: el objetivo es poder encontrarles un hogar </p>
       </div>}
       </>
     )

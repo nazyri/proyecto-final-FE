@@ -1,5 +1,8 @@
 import { Delete } from "./hooks/useFecht";
 
+
+
+
  function Eliminar(animal, cambio) {
 
     const actualizar = async ()=>{
@@ -18,6 +21,7 @@ import { Delete } from "./hooks/useFecht";
   return (
     <div>
       <button type="button" onClick={actualizar}>Eliminar</button>
+      
     </div>
   )
 }

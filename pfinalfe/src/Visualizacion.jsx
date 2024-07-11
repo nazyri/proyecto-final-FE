@@ -5,7 +5,7 @@ import Editar from "./Editar"
 
 
 const Visualizacion=()=>{
-
+  
     const [animales,setAnimales]=useState([])
     const [editando,setEditando]=useState(false)
     const [id,setId]=useState('')
@@ -57,6 +57,7 @@ const borrar=(animal)=>{
                 <button onClick={()=>{cambiarEstado(animal)}}>EDITAR</button>       
                 </div> 
           ))}
+    
         </div>
       );
 }

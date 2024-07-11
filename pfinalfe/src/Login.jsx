@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react"
 import { useNavigate } from "react-router-dom"
 import { get } from "./hooks/useFecht"
+import "./styles/Login.css"
 
 
 const Login = () => {
@@ -12,10 +13,11 @@ const Login = () => {
   
   // error
     const vacios = () => {
-    if (!correo.trim && !clave.trim) {
-       alert ("hay espacios vacios")
-    }else{
-      nav("/principal")
+    if (!correo.trim && !clave.trim   ) {
+      alert ("hay espacios vacios")
+      }else{
+        nav("/principal")
+        return
        
     }
     }
@@ -32,9 +34,11 @@ const Login = () => {
 
     return (
       <>
-    <input className="inicio" type="gmail" id="correos" placeholder="Ingrese su correo"onChange={(e)=>setCorreo(e.target.value)}/>
-    <input className="inicio" type="password" id="clave" placeholder="Ingrese su contraseña"onChange={(e)=>setClave(e.target.value)}/>
-    <button className="boton" id="guardarclave"  onClick={()=>{nav("/principal")(vacios)}}>Ir a la pagina</button>
+      <div className="seccion6">
+      <input className="inicio" type="gmail" id="correos" placeholder="Ingrese su correo"onChange={(e)=>setCorreo(e.target.value)}/>
+      <input className="inicio" type="password" id="clave" placeholder="Ingrese su contraseña"onChange={(e)=>setClave(e.target.value)}/>
+      <button className="boton" id="guardarclave"  onClick={()=>{vacios( nav("/principal"))}}>Ir a la pagina</button>
+      </div>
       </>
     )
   }

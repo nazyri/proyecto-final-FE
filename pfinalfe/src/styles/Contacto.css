@@ -1,17 +1,13 @@
 .celeste{
-    display: grid;
-    grid-template-columns: 500px 500px;
-    gap: 1px;
+
     margin: 100px;
     text-align: center;
-    background-color: cyan;
-    width: 1290px;
-    height: 800px;
+
 }
 
-.tel{
+/* .tel{
     background-color: aliceblue;
-    color: blue;
+    color: rgb(245, 189, 233);
     margin: 50px;
     width: 250px;
     height: 200px;
@@ -19,7 +15,7 @@
 
 .correo{
     background-color: aliceblue;
-    color: blue;
+    color: rgb(245, 189, 233);
     margin-top: 50px;
     margin-left: -90px;
     width: 250px;
@@ -28,7 +24,7 @@
 
 .insta{
     background-color: aliceblue;
-    color: blue;
+    color: rgb(245, 189, 233);
     margin: 50px;
     width: 250px;
     height: 200px;
@@ -36,9 +32,9 @@
 
 .ubi{
     background-color: aliceblue;
-    color: blue;
+    color: rgb(245, 189, 233);
     margin-top: 50px;
     margin-left: -90px;
     width: 250px;
     height: 200px;
-}
+} */

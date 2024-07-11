@@ -1,7 +1,7 @@
 import { useState } from "react"
 import { post } from "./hooks/useFecht"
 import { useNavigate } from "react-router-dom"
-
+import "./styles/Registro.css"
 
 
 const Registro = () => {
@@ -26,20 +26,21 @@ const Registro = () => {
         if (!nombre.trim && !correo.trim && !clave.trim) {
             alert("espacios vacios")
         } else {
-            
             nav("/login")
+            
 
         }
         }
 
     return (
-        <>
+        <div className="seccion">
             <input className="inicio" type="text" placeholder="Ingrese su nombre" onChange={(e)=>setNombre(e.target.value)} />
             <input className="inicio" type="mail" placeholder="Ingrese su correo" onChange={(e)=>setCorreo(e.target.value)} />
             <input className="inicio" type="password" placeholder="Ingrese su contraseña" onChange={(e)=>setClave(e.target.value)} />
             <button className="boton" onClick={crearUsuario}>Guardar</button>
             <button className="boton" onClick={espacios}>Login</button>
-        </>
+
+        </div>
     )
 }
 

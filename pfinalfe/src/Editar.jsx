@@ -33,6 +33,8 @@ function Editar({animal, cambio}) {
       <p>Si desea que la informacion se actualice dele click al boton</p>
 
       <button type="button" onClick={actualizar}>cambiar informacion</button>
+
+      
     </div>
   )
 }
