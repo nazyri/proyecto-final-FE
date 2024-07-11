@@ -1,26 +1,16 @@
-// import { get } from "./hooks/useFecht"
+
 import "./styles/Principal.css"
 import { useState } from "react"
 import Visualizacion from "./Visualizacion"
 import ListaAdopcion from "./ListaAdopcion"
 import { useNavigate } from "react-router-dom"
 
-
-
 function Principal() {
 
-  
-  // const [buscar, setBuscar] = useState('');
   const [mostrarAnimales,setMostrarAnimales]=useState(false)
   const [mostrarLista,setMostrarLista]=useState(false)
 
-      
-  
   const nav= useNavigate();
-
-
-
-
 
 return (
   <>

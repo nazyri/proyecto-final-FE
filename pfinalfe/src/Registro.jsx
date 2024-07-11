@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useRef, useState } from "react"
 import { post } from "./hooks/useFecht"
 import { useNavigate } from "react-router-dom"
 import "./styles/Registro.css"
@@ -10,7 +10,9 @@ const Registro = () => {
     const [correo,setCorreo] =useState('')
     const [clave,setClave]= useState('')
 
-
+    const nombreRef = useRef()
+    const correoRef =useRef()
+    const claveRef =useRef()
     
     const crearUsuario =()=>{
         const user={
@@ -22,9 +24,13 @@ const Registro = () => {
 
     }
     const espacios = () => {
+        const nombreTrim = nombreRef.current.value
+        const correoTrim = correoRef.current.value
+        const claveTrim = claveRef.current.value
         // console.log("nombre", nombre.current.value)
-        if (!nombre.trim && !correo.trim && !clave.trim) {
+        if (!nombreTrim || !correoTrim || !claveTrim) {
             alert("espacios vacios")
+            return
         } else {
             nav("/login")
             
@@ -34,9 +40,9 @@ const Registro = () => {
 
     return (
         <div className="seccion">
-            <input className="inicio" type="text" placeholder="Ingrese su nombre" onChange={(e)=>setNombre(e.target.value)} />
-            <input className="inicio" type="mail" placeholder="Ingrese su correo" onChange={(e)=>setCorreo(e.target.value)} />
-            <input className="inicio" type="password" placeholder="Ingrese su contraseña" onChange={(e)=>setClave(e.target.value)} />
+            <input className="inicio" ref={nombreRef} type="text" placeholder="Ingrese su nombre" onChange={(e)=>setNombre(e.target.value)} />
+            <input className="inicio" ref={correoRef} type="mail" placeholder="Ingrese su correo" onChange={(e)=>setCorreo(e.target.value)} />
+            <input className="inicio" ref={claveRef} type="password" placeholder="Ingrese su contraseña" onChange={(e)=>setClave(e.target.value)} />
             <button className="boton" onClick={crearUsuario}>Guardar</button>
             <button className="boton" onClick={espacios}>Login</button>
 
