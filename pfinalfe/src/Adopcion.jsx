@@ -1,6 +1,6 @@
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
-import { useState } from "react"
+import { useState, useRef } from "react"
 import { post } from "./hooks/useFecht"
 
 
@@ -12,6 +12,8 @@ function Adopcion() {
     const [descripcion,setDescripcion]= useState('')
     const [selectedImage, setSelectedImage] = useState(null);
   
+    const razaRef = useRef();
+    const descripcionRef = useRef();
     
     const Adopcion =()=>{
 
@@ -28,12 +30,18 @@ function Adopcion() {
         
         }
     const espacios = () => {
-        // console.log("nombre", nombre.current.value)
-        if (!fecha.trim && !raza.trim && !selectedImage.trim && !descripcion.trim) {
-            
-            alert('holaaaa')
-        } 
-    }
+
+      const razaTrim = razaRef.current.value
+      const descripcionTrim = descripcionRef.current.value
+        
+        if ( !razaTrim || !descripcionTrim) {
+          alert("espacios vacios")
+          return
+      } 
+
+      }
+
+        
 
     const handleImageChange = (e) => {
       const file = e.target.files[0];
@@ -61,11 +69,11 @@ function Adopcion() {
       <p>Poner en adopcion a una mascota de la calle</p>
       <input type="file" placeholder="Suba la imagen" onChange={handleImageChange}/>
       <img src={selectedImage}/>
-          <DatePicker selected={fecha}  placeholder="ingrese la fecha" onChange={(date) => setFecha(date)} />
-      <input type="text" placeholder="Que raza es" onChange={(e)=>setRaza(e.target.value)}/>
-      <input type="text" placeholder="Agregue una descripcion" onChange={(e)=>setDescripcion(e.target.value)}/>
-      <button onClick={Adopcion}>Poner en adopcion</button>
-      <button onClick={espacios}>contactarnos</button>
+          <DatePicker selected={fecha} placeholder="ingrese la fecha" onChange={(date) => setFecha(date)} />
+      <input type="text" ref={razaRef} placeholder="Que raza es" onChange={(e)=>setRaza(e.target.value)}/>
+      <input type="text" ref={descripcionRef} placeholder="Agregue una descripcion" onChange={(e)=>setDescripcion(e.target.value)}/>
+      <button onClick={()=>Adopcion(espacios)}>Poner en adopcion</button>
+
 
       <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
       
