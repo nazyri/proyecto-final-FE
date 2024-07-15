@@ -32,12 +32,11 @@ const Login = () => {
         nav("/principal")
         return
       }else{
-      alert("Ocurrió un error durante la autenticación. Inténtelo nuevamente más tarde.");
+      alert("Ocurrió un error. Inténtelo más tarde.");
       }
     } catch (error) {
       console.error("Error de autenticación:", error);
-      // Manejo de errores, por ejemplo, mostrar un mensaje genérico de error
-      alert("Ocurrió un error durante la autenticación. Inténtelo nuevamente más tarde.");
+      alert("Ocurrió un error. Inténtelo más tarde.");
     }
   };
 
